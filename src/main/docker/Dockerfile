@@ -1,10 +1,10 @@
-FROM harbor.powerdata.com.cn:30280/com.powersmart.ptyfb.3rd/java:8
+FROM openjdk:8-jdk-alpine3.7
 
-MAINTAINER ptyfb <ptyfb@szboanda.net>
+MAINTAINER css <1130042673@qq.com>
 
-COPY ./engineering-client-1.0.0-SNAPSHOT.jar /usr/local/webapp/engineering-client-1.0.0-SNAPSHOT.jar
+COPY ./demo-0.0.1-SNAPSHOT.jar /usr/local/webapp/demo-0.0.1-SNAPSHOT.jar
 
-COPY ./application.yml /usr/local/webapp/application.yml
+COPY ../resources/application.yml /usr/local/webapp/application.yml
 
 COPY ./profile/application.yml /usr/local/webapp/profile/application.yml
 
@@ -12,9 +12,7 @@ COPY ./exec.sh /usr/local/webapp/exec.sh
 
 COPY ./docker-config.jar /usr/local/webapp/docker-config.jar
 
-RUN mkdir /usr/local/upload
-
-RUN chmod -R 777 /usr/local/webapp/engineering-client-1.0.0-SNAPSHOT.jar
+RUN chmod -R 777 /usr/local/webapp/demo-0.0.1-SNAPSHOT.jar
 
 RUN chmod -R 777 /usr/local/webapp/exec.sh
 
