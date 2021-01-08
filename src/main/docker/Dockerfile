@@ -4,7 +4,7 @@ MAINTAINER css <1130042673@qq.com>
 
 COPY ./demo-0.0.1-SNAPSHOT.jar /usr/local/webapp/demo-0.0.1-SNAPSHOT.jar
 
-COPY ../resources/application.yml /usr/local/webapp/application.yml
+COPY ./application.yml /usr/local/webapp/application.yml
 
 COPY ./profile/application.yml /usr/local/webapp/profile/application.yml
 
